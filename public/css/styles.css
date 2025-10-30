@@ -98,3 +98,20 @@ footer .bi {
 footer .bi:hover {
     color: #0d6efd;
 }
+.hover-scale:hover {
+    transform: translateY(-8px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Optional: show partial cards on left/right */
+.carousel-inner {
+    overflow: visible;
+}
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
