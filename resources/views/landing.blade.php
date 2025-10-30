@@ -60,7 +60,7 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                         <div class="card-img-container">
-                            <img src="{{ asset('images/event1.jpg') }}" class="card-img-top" alt="Event 1">
+                            <img src="{{ asset('images/featured1.jpg') }}" class="card-img-top" alt="Event 1">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="fw-bold">Tech Innovation Summit</h5>
@@ -73,7 +73,7 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                         <div class="card-img-container">
-                            <img src="{{ asset('images/event2.jpg') }}" class="card-img-top" alt="Event 2">
+                            <img src="{{ asset('images/featured2.jpg') }}" class="card-img-top" alt="Event 2">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="fw-bold">Startup Connect</h5>
@@ -86,7 +86,7 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                         <div class="card-img-container">
-                            <img src="{{ asset('images/event3.jpg') }}" class="card-img-top" alt="Event 3">
+                            <img src="{{ asset('images/featured3.jpg') }}" class="card-img-top" alt="Event 3">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="fw-bold">Energy Forum</h5>
@@ -99,7 +99,7 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                         <div class="card-img-container">
-                            <img src="{{ asset('images/event4.jpg') }}" class="card-img-top" alt="Event 4">
+                            <img src="{{ asset('images/featured4.jpg') }}" class="card-img-top" alt="Event 4">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="fw-bold">AI & Data Conference</h5>
@@ -112,7 +112,7 @@
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                         <div class="card-img-container">
-                            <img src="{{ asset('images/event5.jpg') }}" class="card-img-top" alt="Event 5">
+                            <img src="{{ asset('images/featured5.jpg') }}" class="card-img-top" alt="Event 5">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="fw-bold">Green Future Expo</h5>
