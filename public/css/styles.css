@@ -12,11 +12,13 @@ body {
 }
 
 .hero {
-    background: linear-gradient(to right, #0062E6, #33AEFF);
-    color: white;
+  width: 100%;
     text-align: center;
-    padding: 120px 0;
+    padding: 0px 0;
 }
+
+
+
 
 footer a:hover {
     color: #0d6efd !important;

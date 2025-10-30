@@ -3,15 +3,88 @@
 @section('title', 'Home - Landing Page')
 
 @section('content')
+<style>
+    .carousel-caption {
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
 
+</style>
 <!-- Hero Section -->
-<section class="bg-primary text-white text-center py-5">
+<!-- <section class="bg-primary text-white text-center py-5">
     <div class="container">
         <h1 class="display-4 fw-bold">Welcome to Our Landing Page</h1>
         <p class="lead mb-4">Empowering your business with next-gen technology.</p>
         <a href="#" class="btn btn-light btn-lg rounded-pill px-5 shadow">Get Started</a>
     </div>
+</section> -->
+
+<!-- Hero Section with Carousel -->
+<section class="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="{{ asset('images/event1.jpg') }}" class="d-block w-100" alt="Event 1">
+               
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="{{ asset('images/event2.jpg') }}" class="d-block w-100" alt="Event 2">
+              
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="{{ asset('images/event3.jpg') }}" class="d-block w-100" alt="Event 3">
+              
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="{{ asset('images/event4.jpg') }}" class="d-block w-100" alt="Event 4">
+              
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+                <img src="{{ asset('images/event5.jpg') }}" class="d-block w-100" alt="Event 5">
+              
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="carousel-item">
+                <img src="{{ asset('images/event6.jpg') }}" class="d-block w-100" alt="Event 6">
+              
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
+        </div>
+    </div>
 </section>
+
 
 <!-- Features Section -->
 <section class="py-5">
