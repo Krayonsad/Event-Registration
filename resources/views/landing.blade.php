@@ -4,12 +4,35 @@
 
 @section('content')
 <style>
-    .carousel-caption {
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
-    border-radius: 15px;
+.carousel-img {
+    height: 441px;            /* Same height for all slides */
+    object-fit: cover;        /* Ensures image covers the area without stretching */
 }
 
+.carousel-caption {
+    
+    top: 78%;
+    transform: translateY(-50%);
+    
+   padding-left: 317px;
+    border-radius: 15px;
+    max-width: 780px;
+    text-align: center;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.carousel-caption .btn {
+    font-size: 1rem;
+}
 </style>
 <!-- Hero Section -->
 <!-- <section class="bg-primary text-white text-center py-5">
@@ -27,38 +50,62 @@
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="{{ asset('images/event1.jpg') }}" class="d-block w-100" alt="Event 1">
-               
+                <img src="{{ asset('images/event1.jpg') }}" class="d-block w-100 carousel-img" alt="Event 1">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="fw-bold">Annual Tech Summit 2025</h2>
+                    <p class="lead">Join industry leaders and innovators for a day of networking and insights.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 mt-2">Register Now</a> -->
+                </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <img src="{{ asset('images/event2.jpg') }}" class="d-block w-100" alt="Event 2">
-              
+                <img src="{{ asset('images/event2.jpg') }}" class="d-block w-100 carousel-img" alt="Event 2">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="fw-bold">Startup Pitch Day</h2>
+                    <p class="lead">Present your ideas and connect with potential investors.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 mt-2">Learn More</a> -->
+                </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-item">
-                <img src="{{ asset('images/event3.jpg') }}" class="d-block w-100" alt="Event 3">
-              
+                <img src="{{ asset('images/event3.jpg') }}" class="d-block w-100 carousel-img" alt="Event 3">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="fw-bold">Workshops & Training</h2>
+                    <p class="lead">Hands-on workshops for skill development and learning.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 mt-2">Explore</a> -->
+                </div>
             </div>
 
             <!-- Slide 4 -->
             <div class="carousel-item">
-                <img src="{{ asset('images/event4.jpg') }}" class="d-block w-100" alt="Event 4">
-              
+                <img src="{{ asset('images/event4.jpg') }}" class="d-block w-100 carousel-img" alt="Event 4">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="fw-bold">Networking Evening</h2>
+                    <p class="lead">Connect with professionals across industries and domains.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 mt-2">Join Now</a> -->
+                </div>
             </div>
 
             <!-- Slide 5 -->
             <div class="carousel-item">
-                <img src="{{ asset('images/event5.jpg') }}" class="d-block w-100" alt="Event 5">
-              
+                <img src="{{ asset('images/event5.jpg') }}" class="d-block w-100 carousel-img" alt="Event 5">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="fw-bold">Product Launch</h2>
+                    <p class="lead">Be the first to witness groundbreaking product innovations.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 mt-2">See Details</a> -->
+                </div>
             </div>
 
             <!-- Slide 6 -->
             <div class="carousel-item">
-                <img src="{{ asset('images/event6.jpg') }}" class="d-block w-100" alt="Event 6">
-              
+                <img src="{{ asset('images/event6.jpg') }}" class="d-block w-100 carousel-img" alt="Event 6">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="fw-bold">Tech Awards Night</h2>
+                    <p class="lead">Celebrate excellence and innovation in technology and startups.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 mt-2">Celebrate</a> -->
+                </div>
             </div>
 
         </div>
@@ -84,6 +131,7 @@
         </div>
     </div>
 </section>
+
 
 
 <!-- Features Section -->
