@@ -2,9 +2,8 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-md-4">
-                <h5 class="fw-bold mb-3 text-primary">Events</h5>
-                <p>Explore our events that bring together researchers, industry leaders, and professionals to share
-                    knowledge and ideas shaping the future.</p>
+                <h5 class="fw-bold mb-3 text-primary">YourCompanysss</h5>
+                <p>Delivering excellence through digital innovation. We build scalable, smart, and modern web solutions.</p>
             </div>
 
             <div class="col-md-2">
