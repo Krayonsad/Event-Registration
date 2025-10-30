@@ -134,3 +134,58 @@ footer .bi:hover {
 .carousel-control-next {
     width: 5%;
 }
+
+.event-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.event-carousel {
+    display: flex;
+    gap: 0.5rem; /* adjust spacing */
+    animation: scrollEvents 20s linear infinite;
+}
+
+.event-carousel .card {
+    flex: 0 0 calc((100% - 4 * 0.5rem) / 5); /* 5 cards, subtract total gap */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Hover overlay */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-img-container:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Scroll animation */
+@keyframes scrollEvents {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-20%); }
+    100% { transform: translateX(0); }
+}
+
+/* Pause on hover */
+.event-carousel-wrapper:hover .event-carousel {
+    animation-play-state: paused;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .event-carousel .card {
+        flex: 0 0 80%; /* show 1 card */
+    }
+    .event-carousel {
+        animation: scrollEvents 15s linear infinite;
+    }
+}
