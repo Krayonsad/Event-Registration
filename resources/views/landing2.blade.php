@@ -42,92 +42,39 @@
     </section>
 
     <!-- Features Section -->
-  <section class="py-5">
+   <section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">What We Offer</h2>
-            <p class="text-muted">Explore our services and get started quickly</p>
+            <h2 class="fw-bold text-uppercase position-relative d-inline-block pb-2">
+                Our Featured Events
+            </h2>
+            <div class="underline-2 mx-auto mt-1 mb-3"></div>
+            <p class="text-muted fs-5 px-3">
+                Discover our exciting upcoming events designed to connect, innovate, and inspire.
+            </p>
         </div>
 
-        <!-- Multi-item Carousel -->
-        <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center gap-3">
-                        <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale" style="flex:0 0 18%;">
-                            <div class="card-body text-center">
-                                <div class="mb-3">
-                                    <i class="bi bi-person-plus-fill fs-1 text-primary"></i>
-                                </div>
-                                <h5 class="card-title fw-bold">Register Now</h5>
-                                <p class="card-text text-muted">Get started with our services in a few simple steps.</p>
-                                <a href="#" class="btn btn-primary rounded-pill px-3">Register</a>
-                            </div>
-                        </div>
-                        <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale" style="flex:0 0 18%;">
-                            <div class="card-body text-center">
-                                <div class="mb-3">
-                                    <i class="bi bi-gear-fill fs-1 text-success"></i>
-                                </div>
-                                <h5 class="card-title fw-bold">Our Features</h5>
-                                <p class="card-text text-muted">Learn more about what we offer.</p>
-                                <a href="#" class="btn btn-success rounded-pill px-3">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale" style="flex:0 0 18%;">
-                            <div class="card-body text-center">
-                                <div class="mb-3">
-                                    <i class="bi bi-envelope-fill fs-1 text-danger"></i>
-                                </div>
-                                <h5 class="card-title fw-bold">Contact Us</h5>
-                                <p class="card-text text-muted">Get in touch with our support team.</p>
-                                <a href="#" class="btn btn-danger rounded-pill px-3">Contact</a>
-                            </div>
-                        </div>
-                        <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale" style="flex:0 0 18%;">
-                            <div class="card-body text-center">
-                                <div class="mb-3">
-                                    <i class="bi bi-calendar-event fs-1 text-warning"></i>
-                                </div>
-                                <h5 class="card-title fw-bold">Events</h5>
-                                <p class="card-text text-muted">Stay updated on upcoming events.</p>
-                                <a href="#" class="btn btn-warning rounded-pill px-3">View Events</a>
-                            </div>
-                        </div>
-                        <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale" style="flex:0 0 18%;">
-                            <div class="card-body text-center">
-                                <div class="mb-3">
-                                    <i class="bi bi-people-fill fs-1 text-info"></i>
-                                </div>
-                                <h5 class="card-title fw-bold">Community</h5>
-                                <p class="card-text text-muted">Join our vibrant community of users.</p>
-                                <a href="#" class="btn btn-info rounded-pill px-3">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Carousel wrapper -->
+     <div class="event-carousel-wrapper">
+    <div class="event-carousel d-flex gap-2">
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center gap-3">
-                        <!-- Repeat cards shifted by one or looped -->
-                        <!-- You can repeat cards with different content for the next slide -->
+        @for ($i = 1; $i <= 5; $i++)
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 flex-shrink-0 card-hover">
+                <div class="card-img-container position-relative">
+                    <img src="{{ asset('images/event'.$i.'.jpg') }}" class="card-img-top" alt="Event {{$i}}">
+                    <!-- Hover overlay -->
+                    <div class="card-overlay d-flex flex-column justify-content-center align-items-center text-center p-2">
+                        <h5 class="fw-bold text-white">Event Title {{$i}}</h5>
+                        <p class="text-white">Short description for event {{$i}} goes here.</p>
                     </div>
                 </div>
             </div>
+        @endfor
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
     </div>
+</div>
+
+
+
 </section>
-
-<!-- Custom CSS -->
-
 @endsection

@@ -42,39 +42,95 @@
     </section>
 
     <!-- Features Section -->
-   <section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-uppercase position-relative d-inline-block pb-2">
-                Our Featured Events
-            </h2>
-            <div class="underline-2 mx-auto mt-1 mb-3"></div>
-            <p class="text-muted fs-5 px-3">
-                Discover our exciting upcoming events designed to connect, innovate, and inspire.
-            </p>
-        </div>
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-uppercase position-relative d-inline-block pb-2">
+                    Our Featured Events
+                </h2>
+                <div class="underline-2 mx-auto mt-1 mb-3"></div>
+                <p class="text-muted fs-5 px-3">
+                    Discover our exciting upcoming events designed to connect, innovate, and inspire.
+                </p>
+            </div>
 
-        <!-- Carousel wrapper -->
-     <div class="event-carousel-wrapper">
-    <div class="event-carousel d-flex gap-2">
+            <div class="row g-4 justify-content-center">
 
-        @for ($i = 1; $i <= 5; $i++)
-            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 flex-shrink-0 card-hover">
-                <div class="card-img-container position-relative">
-                    <img src="{{ asset('images/event'.$i.'.jpg') }}" class="card-img-top" alt="Event {{$i}}">
-                    <!-- Hover overlay -->
-                    <div class="card-overlay d-flex flex-column justify-content-center align-items-center text-center p-2">
-                        <h5 class="fw-bold text-white">Event Title {{$i}}</h5>
-                        <p class="text-white">Short description for event {{$i}} goes here.</p>
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event1.jpg') }}" class="card-img-top" alt="Event 1">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Tech Innovation Summit</h5>
+                            <p class="text-muted">Explore the future of technology with experts worldwide.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event2.jpg') }}" class="card-img-top" alt="Event 2">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Startup Connect</h5>
+                            <p class="text-muted">Join entrepreneurs and investors for collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event3.jpg') }}" class="card-img-top" alt="Event 3">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Energy Forum</h5>
+                            <p class="text-muted">Discuss the sustainable solutions for a greener planet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event4.jpg') }}" class="card-img-top" alt="Event 4">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">AI & Data Conference</h5>
+                            <p class="text-muted">Experience the latest innovations in AI and data science.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event5.jpg') }}" class="card-img-top" alt="Event 5">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Green Future Expo</h5>
+                            <p class="text-muted">Promoting sustainability and environmental innovation.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        @endfor
+        </div>
+    </section>
 
-    </div>
-</div>
+    <!-- Optional Custom Styles -->
+    <style>
+        .hover-scale:hover {
+            transform: translateY(-8px);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 
-
-
-</section>
 @endsection
