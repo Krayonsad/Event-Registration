@@ -46,54 +46,77 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold text-uppercase position-relative d-inline-block pb-2">
-                    We Offer Events
+                    Our Featured Events
                 </h2>
                 <div class="underline-2 mx-auto mt-1 mb-3"></div>
                 <p class="text-muted fs-5 px-3">
-                    Explore the wide range of events we organize to promote innovation, collaboration,
-                    and growth across various industries.
+                    Discover our exciting upcoming events designed to connect, innovate, and inspire.
                 </p>
             </div>
 
             <div class="row g-4 justify-content-center">
+
                 <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event1.jpg') }}" class="card-img-top" alt="Event 1">
+                        </div>
                         <div class="card-body text-center">
-                            <div class="mb-3">
-                                <i class="bi bi-person-plus-fill fs-1 text-primary"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Register Now</h5>
-                            <p class="card-text text-muted">Get started with our services in a few simple steps.</p>
-                            <a href="#" class="btn btn-primary rounded-pill px-4">Register</a>
+                            <h5 class="fw-bold">Tech Innovation Summit</h5>
+                            <p class="text-muted">Explore the future of technology with experts worldwide.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event2.jpg') }}" class="card-img-top" alt="Event 2">
+                        </div>
                         <div class="card-body text-center">
-                            <div class="mb-3">
-                                <i class="bi bi-gear-fill fs-1 text-success"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Our Features</h5>
-                            <p class="card-text text-muted">Learn more about what we offer.</p>
-                            <a href="#" class="btn btn-success rounded-pill px-4">Learn More</a>
+                            <h5 class="fw-bold">Startup Connect</h5>
+                            <p class="text-muted">Join entrepreneurs and investors for collaboration.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 hover-scale">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event3.jpg') }}" class="card-img-top" alt="Event 3">
+                        </div>
                         <div class="card-body text-center">
-                            <div class="mb-3">
-                                <i class="bi bi-envelope-fill fs-1 text-danger"></i>
-                            </div>
-                            <h5 class="card-title fw-bold">Contact Us</h5>
-                            <p class="card-text text-muted">Get in touch with our support team.</p>
-                            <a href="#" class="btn btn-danger rounded-pill px-4">Contact</a>
+                            <h5 class="fw-bold">Energy Forum</h5>
+                            <p class="text-muted">Discuss the sustainable solutions for a greener planet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event4.jpg') }}" class="card-img-top" alt="Event 4">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">AI & Data Conference</h5>
+                            <p class="text-muted">Experience the latest innovations in AI and data science.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                        <div class="card-img-container">
+                            <img src="{{ asset('images/event5.jpg') }}" class="card-img-top" alt="Event 5">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Green Future Expo</h5>
+                            <p class="text-muted">Promoting sustainability and environmental innovation.</p>
                         </div>
                     </div>
                 </div>
@@ -101,13 +124,4 @@
             </div>
         </div>
     </section>
-
-    <!-- Optional Custom Styles -->
-    <style>
-        .hover-scale:hover {
-            transform: translateY(-8px);
-            transition: all 0.3s ease-in-out;
-        }
-    </style>
-
 @endsection
