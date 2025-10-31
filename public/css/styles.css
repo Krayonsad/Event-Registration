@@ -96,14 +96,9 @@ body {
     object-fit: cover;
 }
 
-.card-hover:hover img {
-    transform: scale(1.1);
-}
-
-/* .card-hover:hover {
-    transform: translateY(-5px);
-    transition: 0.3s ease;
-} */
+.transition { transition: transform 0.4s ease; }
+.card:hover img { transform: scale(1.1); }
+/* .card:hover { transform: translateY(-5px); } */
 
 footer a:hover {
     color: #0d6efd !important;
@@ -188,5 +183,5 @@ footer .bi:hover {
     .event-carousel {
         animation: scrollEvents 15s linear infinite;
     }
-    
+
 }

@@ -3,7 +3,6 @@
 @section('title', 'Home - Landing Page')
 
 @section('content')
-    <!-- Hero Section with Carousel -->
     <section class="hero">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
@@ -41,7 +40,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -55,82 +53,100 @@
             </div>
 
             <div class="row g-4 justify-content-center">
-
-                <!-- Card 1 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
-                        <div class="card-img-container">
-                            <img src="{{ asset('images/featured1.jpg') }}" class="card-img-top" alt="Event 1">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                            <div class="card-img-container">
+                                <img src="{{ asset('images/featured1.jpg') }}" class="card-img-top"
+                                    alt="Tech Innovation Summit">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Tech & Innovation Summit</h5>
+                                <p class="text-muted">Explore AI, Robotics, and emerging technologies with global experts.
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Tech Innovation Summit</h5>
-                            <p class="text-muted">Explore the future of technology with experts worldwide.</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
-                        <div class="card-img-container">
-                            <img src="{{ asset('images/featured2.jpg') }}" class="card-img-top" alt="Event 2">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                            <div class="card-img-container">
+                                <img src="{{ asset('images/featured2.jpg') }}" class="card-img-top" alt="Startup Connect">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Startup & Entrepreneurship Expo</h5>
+                                <p class="text-muted">Pitch, network, and grow with investors and accelerators worldwide.
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Startup Connect</h5>
-                            <p class="text-muted">Join entrepreneurs and investors for collaboration.</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
-                        <div class="card-img-container">
-                            <img src="{{ asset('images/featured3.jpg') }}" class="card-img-top" alt="Event 3">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                            <div class="card-img-container">
+                                <img src="{{ asset('images/featured3.jpg') }}" class="card-img-top" alt="Business Forum">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Business & Leadership Forum</h5>
+                                <p class="text-muted">Empowering industry leaders and entrepreneurs for tomorrow’s success.
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Energy Forum</h5>
-                            <p class="text-muted">Discuss the sustainable solutions for a greener planet.</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
-                        <div class="card-img-container">
-                            <img src="{{ asset('images/featured4.jpg') }}" class="card-img-top" alt="Event 4">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                            <div class="card-img-container">
+                                <img src="{{ asset('images/featured4.jpg') }}" class="card-img-top" alt="Government Event">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Government & Public Innovation</h5>
+                                <p class="text-muted">Driving change through Digital India, Smart Cities, and policy
+                                    innovation.</p>
+                            </div>
                         </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">AI & Data Conference</h5>
-                            <p class="text-muted">Experience the latest innovations in AI and data science.</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- Card 5 -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
-                        <div class="card-img-container">
-                            <img src="{{ asset('images/featured5.jpg') }}" class="card-img-top" alt="Event 5">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                            <div class="card-img-container">
+                                <img src="{{ asset('images/featured5.jpg') }}" class="card-img-top"
+                                    alt="Green Future Expo">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Green Future Expo</h5>
+                                <p class="text-muted">Building a sustainable tomorrow with renewable energy solutions.</p>
+                            </div>
                         </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Green Future Expo</h5>
-                            <p class="text-muted">Promoting sustainability and environmental innovation.</p>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
+                            <div class="card-img-container">
+                                <img src="{{ asset('images/featured6.jpg') }}" class="card-img-top"
+                                    alt="Education Fair">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Education & Research Fair</h5>
+                                <p class="text-muted">Celebrating innovation in learning, EdTech, and academic excellence.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             </div>
         </div>
     </section>
-
-    <!-- Optional Custom Styles -->
-    <style>
-        .hover-scale:hover {
-            transform: translateY(-8px);
-            transition: all 0.3s ease-in-out;
-        }
-    </style>
 
 @endsection
