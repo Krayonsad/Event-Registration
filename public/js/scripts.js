@@ -7,3 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// select2 initialization
+$(document).ready(function () {
+    $('.select2').select2({
+        theme: 'bootstrap-5'
+    });
+});

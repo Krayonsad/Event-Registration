@@ -45,7 +45,7 @@
                         <div class="row g-3 mb-5">
                             <div class="col-md-6">
                                 <label class="form-label">Country Code*</label>
-                                <select name="contact_country_code" class="form-select" required>
+                                <select name="contact_country_code" class="form-select select2" required>
                                     <option value="">Select Country Code</option>
                                     @foreach ($countries as $country)
                                         <option value="{{ $country['code'] }}"
@@ -101,7 +101,7 @@
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label">Country*</label>
-                                <select name="country" class="form-select" required>
+                                <select name="country" class="form-select select2" required>
                                     <option value="">Select Country</option>
                                     @foreach ($countries as $country)
                                         <option value="{{ $country['name'] }}"
