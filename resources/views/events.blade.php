@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Home - Landing Page')
+@section('title', 'Event Page')
 
 @section('content')
     <section class="hero">

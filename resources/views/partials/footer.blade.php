@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-md-4">
-                <h5 class="fw-bold mb-3 text-primary">YourCompanysss</h5>
+                <h5 class="fw-bold mb-3 text-primary">Events</h5>
                 <p>Delivering excellence through digital innovation. We build scalable, smart, and modern web solutions.</p>
             </div>
 
