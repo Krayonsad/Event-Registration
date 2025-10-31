@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('event_name');
             $table->string('full_name');
             $table->string('email')->unique();
-            $table->string('gender')->nullable();
             $table->string('contact_country_code', 10);
             $table->string('contact_number', 20);
             $table->string('address_line');

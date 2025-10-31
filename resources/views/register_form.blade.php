@@ -81,25 +81,31 @@
                                 <input type="text" name="industry" value="{{ old('industry') }}" class="form-control"
                                     placeholder="e.g. Information Technology">
                             </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">Address*</label>
+                                <textarea name="address_line" rows="2" class="form-control" required
+                                    placeholder="e.g. 123 Business Park, Sector 21, Noida">{{ old('address_line') }}</textarea>
+                            </div>
                         </div>
 
                         <div class="row g-3 mb-3">
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <label class="form-label">City*</label>
                                 <input type="text" name="city" value="{{ old('city') }}" class="form-control"
                                     required placeholder="Enter City">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <label class="form-label">State*</label>
                                 <input type="text" name="state" value="{{ old('state') }}" class="form-control"
                                     required placeholder="Enter State">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <label class="form-label">Zipcode*</label>
                                 <input type="text" name="zipcode" value="{{ old('zipcode') }}" class="form-control"
                                     required placeholder="Enter Zipcode">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <label class="form-label">Country*</label>
                                 <select name="country" class="form-select select2" required>
                                     <option value="">Select Country</option>
@@ -111,12 +117,6 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Address*</label>
-                            <textarea name="address_line" rows="2" class="form-control" required
-                                placeholder="e.g. 123 Business Park, Sector 21, Noida">{{ old('address_line') }}</textarea>
                         </div>
 
                         <div class="row g-3 mb-3">

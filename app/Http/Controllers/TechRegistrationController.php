@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\TechRegistration;
 
 class TechRegistrationController extends Controller
@@ -40,7 +41,6 @@ class TechRegistrationController extends Controller
             'event_name'            => 'required|string|max:255',
             'full_name'             => 'required|string|max:255',
             'email'                 => 'required|email:rfc,dns|max:255|unique:tech_registrations,email',
-            'gender'                => 'nullable|string|max:10',
             'contact_country_code'  => 'required|string|max:10',
             'contact_number'        => 'required|string|max:20',
             'address_line'          => 'required|string|max:255',
@@ -56,8 +56,7 @@ class TechRegistrationController extends Controller
 
         TechRegistration::create($validated);
 
-        return redirect()
-            ->back()
-            ->with('success', '✅ Registration successful for ' . $request->event_name . '!');
+        // return redirect()->back()->with('success', '✅ Registration successful for ' . $request->event_name . '!');
+        return redirect()->route('events')->with('success', '✅ Registration successful for ' . $request->event_name . '!');
     }
 }
