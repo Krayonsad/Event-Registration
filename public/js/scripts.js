@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// select2 initialization
+// // select2 initialization
 $(document).ready(function () {
-    $('.select2').select2({
-        theme: 'bootstrap-5'
-    });
+  $('.select2').select2({
+    theme: 'bootstrap-5',
+    width: '100%'
+  });
 });
+

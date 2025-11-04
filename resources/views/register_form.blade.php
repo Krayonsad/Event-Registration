@@ -30,13 +30,13 @@
 
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
-                                <label class="form-label">Full Name*</label>
+                                <label class="form-label">Full Name <span class="text-danger">*</span></label>
                                 <input type="text" name="full_name" value="{{ old('full_name') }}" class="form-control"
                                     required placeholder="e.g. John Doe">
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">Email*</label>
+                                <label class="form-label">Email <span class="text-danger">*</span></label>
                                 <input type="email" name="email" value="{{ old('email') }}" class="form-control"
                                     required placeholder="example@gmail.com">
                             </div>
@@ -44,7 +44,7 @@
 
                         <div class="row g-3 mb-5">
                             <div class="col-md-6">
-                                <label class="form-label">Country Code*</label>
+                                <label class="form-label">Country Code <span class="text-danger">*</span></label>
                                 <select name="contact_country_code" class="form-select select2" required>
                                     <option value="">Select Country Code</option>
                                     @foreach ($countries as $country)
@@ -57,7 +57,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">Mobile Number*</label>
+                                <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
                                 <input type="text" name="contact_number" value="{{ old('contact_number') }}"
                                     class="form-control" required placeholder="Enter correct mobile number">
                             </div>
@@ -67,7 +67,7 @@
 
                         <div class="row g-3 mb-3">
                             <div class="col-md-4">
-                                <label class="form-label">Company Name*</label>
+                                <label class="form-label">Company Name <span class="text-danger">*</span></label>
                                 <input type="text" name="company_name" value="{{ old('company_name') }}"
                                     class="form-control" required placeholder="e.g. TechNova Pvt. Ltd.">
                             </div>
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <label class="form-label">Address*</label>
+                                <label class="form-label">Address <span class="text-danger">*</span></label>
                                 <textarea name="address_line" rows="2" class="form-control" required
                                     placeholder="e.g. 123 Business Park, Sector 21, Noida">{{ old('address_line') }}</textarea>
                             </div>
@@ -91,22 +91,22 @@
 
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
-                                <label class="form-label">City*</label>
+                                <label class="form-label">City <span class="text-danger">*</span></label>
                                 <input type="text" name="city" value="{{ old('city') }}" class="form-control"
                                     required placeholder="Enter City">
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">State*</label>
+                                <label class="form-label">State <span class="text-danger">*</span></label>
                                 <input type="text" name="state" value="{{ old('state') }}" class="form-control"
                                     required placeholder="Enter State">
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Zipcode*</label>
+                                <label class="form-label">Zipcode <span class="text-danger">*</span></label>
                                 <input type="text" name="zipcode" value="{{ old('zipcode') }}" class="form-control"
                                     required placeholder="Enter Zipcode">
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Country*</label>
+                                <label class="form-label">Country <span class="text-danger">*</span></label>
                                 <select name="country" class="form-select select2" required>
                                     <option value="">Select Country</option>
                                     @foreach ($countries as $country)
@@ -123,6 +123,53 @@
                             <div class="col-md-12">
                                 <label class="form-label">Message</label>
                                 <textarea name="message" rows="2" class="form-control" placeholder="Enter Any Message....">{{ old('message') }}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <label class="form-label fw-semibold d-flex align-items-center flex-wrap gap-1">
+                                    <span>
+                                        Application Area / Industry
+                                        <small class="text-muted">(Select one or more relevant areas)</small>
+                                    </span>
+                                    <span class="text-danger">*</span>
+                                </label>
+
+                                <div class="row gy-2">
+                                    @php
+                                        $industries = [
+                                            'Artificial Intelligence (AI)',
+                                            'Machine Learning & Data Science',
+                                            'Robotics & Automation',
+                                            'Information Technology (IT)',
+                                            'Cybersecurity',
+                                            'Internet of Things (IoT)',
+                                            'Blockchain & Web3',
+                                            'AR / VR & Metaverse',
+                                            'Startups & Innovation',
+                                            'Research & Academia',
+                                        ];
+                                    @endphp
+
+                                    @foreach ($industries as $industry)
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <div class="form-check d-flex align-items-center">
+                                                <input class="form-check-input me-2" type="checkbox" name="industries[]"
+                                                    value="{{ $industry }}"
+                                                    id="industry_{{ Str::slug($industry, '_') }}"
+                                                    @if (is_array(old('industries')) && in_array($industry, old('industries'))) checked @endif
+                                                    @if (isset($event) &&
+                                                            $event == 'Tech & Innovation Summit' &&
+                                                            ($industry == 'Artificial Intelligence (AI)' || $industry == 'Robotics & Automation')) checked @endif>
+                                                <label class="form-check-label fw-normal"
+                                                    for="industry_{{ Str::slug($industry, '_') }}">
+                                                    {{ $industry }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
 
