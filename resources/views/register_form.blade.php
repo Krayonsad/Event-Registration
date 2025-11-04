@@ -43,9 +43,9 @@
                         </div>
 
                         <div class="row g-3 mb-5">
-                            <div class="col-md-6">
+                            <div class="col-12 col-md-6">
                                 <label class="form-label">Country Code <span class="text-danger">*</span></label>
-                                <select name="contact_country_code" class="form-select select2" required>
+                                <select name="contact_country_code" class="form-select select2 w-100" required>
                                     <option value="">Select Country Code</option>
                                     @foreach ($countries as $country)
                                         <option value="{{ $country['code'] }}"
@@ -56,10 +56,10 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-12 col-md-6">
                                 <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
                                 <input type="text" name="contact_number" value="{{ old('contact_number') }}"
-                                    class="form-control" required placeholder="Enter correct mobile number">
+                                    class="form-control w-100" required placeholder="Enter correct mobile number">
                             </div>
                         </div>
 
