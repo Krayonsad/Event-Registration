@@ -134,16 +134,25 @@
                                 <div class="row gy-2">
                                     @php
                                         $industries = [
-                                            'Artificial Intelligence (AI)',
-                                            'Machine Learning & Data Science',
-                                            'Robotics & Automation',
-                                            'Information Technology (IT)',
-                                            'Cybersecurity',
-                                            'Internet of Things (IoT)',
-                                            'Blockchain & Web3',
-                                            'AR / VR & Metaverse',
+                                            'Agriculture & AgriTech',
+                                            'Clean Energy & Sustainability',
+                                            'Electric Vehicles (EV) & Mobility',
+                                            'FinTech (Financial Technology)',
+                                            'HealthTech & MedTech',
+                                            'EdTech (Education Technology)',
+                                            'FoodTech & Agri Innovations',
+                                            'E-Commerce & Retail',
+                                            'Logistics & Supply Chain',
+                                            'Manufacturing & Automation',
+                                            'Tourism & Hospitality',
+                                            'Social Impact & Non-Profit',
+                                            'Real Estate & PropTech',
+                                            'Fashion & Lifestyle',
+                                            'Media, Marketing & Advertising',
+                                            'SpaceTech & DeepTech',
+                                            'Sports & Wellness',
                                             'Startups & Innovation',
-                                            'Research & Academia',
+                                            'Others',
                                         ];
                                     @endphp
 
@@ -164,6 +173,10 @@
                                             </div>
                                         </div>
                                     @endforeach
+                                    <div class="col-12 mt-2" id="otherIndustryBox" style="display: none;">
+                                        <input type="text" name="other_industry" id="other_industry"
+                                            class="form-control" placeholder="Please specify your industry">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,3 +193,16 @@
         </div>
     </div>
 @endsection
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const otherCheckbox = document.getElementById('industry_others');
+        const otherBox = document.getElementById('otherIndustryBox');
+
+        if (otherCheckbox) {
+            otherCheckbox.addEventListener('change', function() {
+                otherBox.style.display = this.checked ? 'block' : 'none';
+            });
+        }
+    });
+</script>

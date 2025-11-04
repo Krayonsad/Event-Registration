@@ -52,11 +52,21 @@ class TechRegistrationController extends Controller
             'designation'          => 'nullable|string|max:255',
             'industries'           => 'required|array',
             'industries.*'         => 'string|max:255',
+            'other_industry'       => 'nullable|string|max:255',
             'message'              => 'nullable|string|max:1000',
         ]);
 
-        $validated['industry'] = implode(', ', $validated['industries']);
+        $industries = implode(', ', $validated['industries']);
+
+        $otherIndustry = $request->input('other_industry');
+        if (!empty($otherIndustry)) {
+            $industries .= ', ' . $otherIndustry;
+        }
+
+        $validated['industry'] = $industries;
         unset($validated['industries']);
+
+        $validated['other_industry'] = $otherIndustry ?? null;
 
         $validated['order_id'] = $this->generateOrderId($validated['event_name']);
 
@@ -75,7 +85,6 @@ class TechRegistrationController extends Controller
                 $prefix .= strtoupper($word[0]);
             }
         }
-
         $uniqueNumber = time();
         return $prefix . $uniqueNumber;
     }

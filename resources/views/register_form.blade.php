@@ -142,8 +142,15 @@
                                             'Internet of Things (IoT)',
                                             'Blockchain & Web3',
                                             'AR / VR & Metaverse',
+                                            'Cloud Computing & DevOps',
+                                            'Software Development & SaaS',
+                                            'Big Data & Analytics',
+                                            'Quantum Computing',
+                                            'Digital Transformation',
+                                            'Telecommunication & 5G',
                                             'Startups & Innovation',
                                             'Research & Academia',
+                                            'Others',
                                         ];
                                     @endphp
 
@@ -164,6 +171,10 @@
                                             </div>
                                         </div>
                                     @endforeach
+                                    <div class="col-12 mt-2" id="otherIndustryBox" style="display: none;">
+                                        <input type="text" name="other_industry" id="other_industry"
+                                            class="form-control" placeholder="Please specify your industry">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,3 +191,16 @@
         </div>
     </div>
 @endsection
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const otherCheckbox = document.getElementById('industry_others');
+        const otherBox = document.getElementById('otherIndustryBox');
+
+        if (otherCheckbox) {
+            otherCheckbox.addEventListener('change', function() {
+                otherBox.style.display = this.checked ? 'block' : 'none';
+            });
+        }
+    });
+</script>
