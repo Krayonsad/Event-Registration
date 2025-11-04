@@ -66,20 +66,15 @@
                         <h5 class="fw-bold border-bottom pb-2 mb-3 mt-4">Company Details</h5>
 
                         <div class="row g-3 mb-3">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label class="form-label">Company Name <span class="text-danger">*</span></label>
                                 <input type="text" name="company_name" value="{{ old('company_name') }}"
                                     class="form-control" required placeholder="e.g. TechNova Pvt. Ltd.">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label class="form-label">Designation</label>
                                 <input type="text" name="designation" value="{{ old('designation') }}"
                                     class="form-control" placeholder="e.g. Software Engineer">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="form-label">Industry</label>
-                                <input type="text" name="industry" value="{{ old('industry') }}" class="form-control"
-                                    placeholder="e.g. Information Technology">
                             </div>
 
                             <div class="col-md-12">

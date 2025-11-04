@@ -38,25 +38,45 @@ class TechRegistrationController extends Controller
     public function postForm(Request $request)
     {
         $validated = $request->validate([
-            'event_name'            => 'required|string|max:255',
-            'full_name'             => 'required|string|max:255',
-            'email'                 => 'required|email:rfc,dns|max:255|unique:tech_registrations,email',
-            'contact_country_code'  => 'required|string|max:10',
-            'contact_number'        => 'required|string|max:20',
-            'address_line'          => 'required|string|max:255',
-            'city'                  => 'required|string|max:100',
-            'state'                 => 'required|string|max:100',
-            'country'               => 'required|string|max:100',
-            'zipcode'               => 'required|string|max:20',
-            'company_name'          => 'required|string|max:255',
-            'designation'           => 'nullable|string|max:255',
-            'industry'              => 'nullable|string|max:255',
-            'message'               => 'nullable|string|max:1000',
+            'event_name'           => 'required|string|max:255',
+            'full_name'            => 'required|string|max:255',
+            'email'                => 'required|email:rfc,dns|max:255|unique:tech_registrations,email',
+            'contact_country_code' => 'required|string|max:10',
+            'contact_number'       => 'required|string|max:20',
+            'address_line'         => 'required|string|max:255',
+            'city'                 => 'required|string|max:100',
+            'state'                => 'required|string|max:100',
+            'country'              => 'required|string|max:100',
+            'zipcode'              => 'required|string|max:20',
+            'company_name'         => 'required|string|max:255',
+            'designation'          => 'nullable|string|max:255',
+            'industries'           => 'required|array',
+            'industries.*'         => 'string|max:255',
+            'message'              => 'nullable|string|max:1000',
         ]);
+
+        $validated['industry'] = implode(', ', $validated['industries']);
+        unset($validated['industries']);
+
+        $validated['order_id'] = $this->generateOrderId($validated['event_name']);
 
         TechRegistration::create($validated);
 
-        // return redirect()->back()->with('success', '✅ Registration successful for ' . $request->event_name . '!');
         return redirect()->route('events')->with('success', '✅ Registration successful for ' . $request->event_name . '!');
+    }
+
+    private function generateOrderId(string $eventName): string
+    {
+        $words = preg_split('/\s+/', $eventName);
+        $prefix = '';
+
+        foreach ($words as $word) {
+            if (ctype_alpha($word[0])) {
+                $prefix .= strtoupper($word[0]);
+            }
+        }
+
+        $uniqueNumber = time();
+        return $prefix . $uniqueNumber;
     }
 }

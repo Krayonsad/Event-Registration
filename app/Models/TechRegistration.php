@@ -11,6 +11,7 @@ class TechRegistration extends Model
 
     protected $fillable = [
         'event_name',
+        'order_id',
         'full_name',
         'email',
         'gender',
