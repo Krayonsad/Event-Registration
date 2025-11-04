@@ -31,7 +31,7 @@ class BusinessController extends Controller
             usort($countries, fn($a, $b) => strcmp($a['name'], $b['name']));
         }
 
-        return view('business', compact('event', 'countries'));
+        return view('business_register', compact('event', 'countries'));
     }
 
     // public function postForm(Request $request)

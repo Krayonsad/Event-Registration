@@ -22,6 +22,15 @@ Route::get('/starup_expo', function () {
 })->name('starup_expo');
 
 
+Route::get('/business', function () {
+    return view('business');
+})->name('business');
+
+Route::get('/gove', function () {
+    return view('gove');
+})->name('gove');
+
+
 Route::get('/register', [TechRegistrationController::class, 'getForm'])->name('register_form');
 
 
@@ -38,11 +47,11 @@ Route::get('/starups_expo', [Starup_expoController::class, 'starup_expo'])
 
 
      
-Route::get('/businessview', [BusinessController::class, 'view'])
-     ->name('business');
+Route::get('/business_register', [BusinessController::class, 'view'])
+     ->name('business_register');
   
-Route::get('/goveview', [GoveController::class, 'view'])
-     ->name('gove');
+Route::get('/gove_business', [GoveController::class, 'view'])
+     ->name('gove_business');
      
 
   Route::get('/greenview', [GreenController::class, 'view'])
