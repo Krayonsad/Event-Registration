@@ -17,7 +17,9 @@ Route::get('/tech-innovation', function () {
     return view('tech_innovation');
 })->name('tech_innovation');
 
-
+Route::get('/starup_expo', function () {
+    return view('starup_expo');
+})->name('starup_expo');
 
 
 Route::get('/register', [TechRegistrationController::class, 'getForm'])->name('register_form');
@@ -25,8 +27,8 @@ Route::get('/register', [TechRegistrationController::class, 'getForm'])->name('r
 
 Route::post('/register', [TechRegistrationController::class, 'postForm'])->name('tech.postForm');
 
-Route::get('/starups_expoview', [Starup_expoController::class, 'view'])
-     ->name('starup_expo');
+Route::get('/starups_register', [Starup_expoController::class, 'view'])
+     ->name('starups_register');
 
 Route::get('/starups_expo', [Starup_expoController::class, 'starup_expo'])
      ->name('starup_expo_detail');

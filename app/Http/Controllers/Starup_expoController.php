@@ -31,7 +31,7 @@ class Starup_expoController extends Controller
             usort($countries, fn($a, $b) => strcmp($a['name'], $b['name']));
         }
 
-        return view('starup_expo', compact('event', 'countries'));
+        return view('starups_register', compact('event', 'countries'));
     }
 
     // public function postForm(Request $request)
