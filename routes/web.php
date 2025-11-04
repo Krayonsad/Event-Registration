@@ -7,6 +7,8 @@ use App\Http\Controllers\Starup_expoController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\GoveController;
 use App\Http\Controllers\GreenController;
+use App\Http\Controllers\EducationController;
+
 
 
 Route::get('/', function () {
@@ -29,7 +31,15 @@ Route::get('/business', function () {
 Route::get('/gove', function () {
     return view('gove');
 })->name('gove');
+Route::get('/green', function () {
+    return view('green');
+})->name('green');
 
+
+
+Route::get('/education', function () {
+    return view('education');
+})->name('education');
 
 Route::get('/register', [TechRegistrationController::class, 'getForm'])->name('register_form');
 
@@ -54,5 +64,13 @@ Route::get('/gove_business', [GoveController::class, 'view'])
      ->name('gove_business');
      
 
-  Route::get('/greenview', [GreenController::class, 'view'])
-     ->name('green');
+  Route::get('/green_register', [GreenController::class, 'view'])
+     ->name('green_register');
+
+      Route::post('/green_register', [EducationController::class, 'postForm'])->name('green.postForm');
+
+       Route::get('/education_register', [EducationController::class, 'view'])
+     ->name('education_register');
+
+
+     Route::post('/education_register', [EducationController::class, 'postForm'])->name('education.postForm');

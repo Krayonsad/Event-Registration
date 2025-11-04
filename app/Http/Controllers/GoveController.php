@@ -31,7 +31,7 @@ class GoveController extends Controller
             usort($countries, fn($a, $b) => strcmp($a['name'], $b['name']));
         }
 
-        return view('gove_business', compact('event', 'countries'));
+        return view('gove_register', compact('event', 'countries'));
     }
 
     // public function postForm(Request $request)

@@ -31,7 +31,7 @@ class GreenController extends Controller
             usort($countries, fn($a, $b) => strcmp($a['name'], $b['name']));
         }
 
-        return view('green', compact('event', 'countries'));
+        return view('green_register', compact('event', 'countries'));
     }
 
     // public function postForm(Request $request)

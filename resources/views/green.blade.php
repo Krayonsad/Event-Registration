@@ -17,7 +17,7 @@
             ['Eco-Tech & Environmental Startups', 'Meet innovators building technology for a cleaner, greener planet.', 'echo.jpg']
         ] as $event)
             <div class="col-12 col-sm-6 col-lg-4">
-                <a href="{{ route('green', ['event' => urlencode($event[0])]) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('green_register', ['event' => urlencode($event[0])]) }}" class="text-decoration-none text-dark">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                         <div class="card-img-container" style="height:200px; overflow:hidden;">
                             <img src="{{ asset('images/' . $event[2]) }}" class="card-img-top" alt="{{ $event[0] }}" style="object-fit:cover; height:100%; width:100%;">

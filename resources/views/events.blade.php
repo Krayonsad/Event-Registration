@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="#" class="text-decoration-none text-dark">
+                    <a href="{{ route('education') }}" class="text-decoration-none text-dark">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 card-hover">
                             <div class="card-img-container">
                                 <img src="{{ asset('images/featured6.jpg') }}" class="card-img-top"
