@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('tech_registrations', function (Blueprint $table) {
             $table->id();
             $table->string('event_name');
+            $table->string('order_id')->unique();
             $table->string('full_name');
             $table->string('email')->unique();
             $table->string('contact_country_code', 10);
@@ -22,9 +23,8 @@ return new class extends Migration
             $table->string('zipcode');
             $table->string('company_name');
             $table->string('designation')->nullable();
-            $table->string('industry')->nullable();
+            $table->text('industry')->nullable();
             $table->text('message')->nullable();
-
             $table->timestamps();
         });
     }
