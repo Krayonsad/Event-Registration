@@ -7,7 +7,7 @@ use App\Models\TechRegistration;
 
 class GoveController extends Controller
 {
-    public function view(Request $request)
+    public function getForm(Request $request)
     {
         $event = urldecode($request->query('event'));
         $response = @file_get_contents('https://restcountries.com/v3.1/all?fields=name,idd');

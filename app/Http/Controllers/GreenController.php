@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TechRegistration;
+use App\Models\GreenRegistrations;
 
 class GreenController extends Controller
 {
-    public function view(Request $request)
+    public function getForm(Request $request)
     {
         $event = urldecode($request->query('event'));
         $response = @file_get_contents('https://restcountries.com/v3.1/all?fields=name,idd');
@@ -34,30 +34,57 @@ class GreenController extends Controller
         return view('green_register', compact('event', 'countries'));
     }
 
-    // public function postForm(Request $request)
-    // {
-    //     $validated = $request->validate([
-    //         'event_name'            => 'required|string|max:255',
-    //         'full_name'             => 'required|string|max:255',
-    //         'email'                 => 'required|email:rfc,dns|max:255|unique:tech_registrations,email',
-    //         'gender'                => 'nullable|string|max:10',
-    //         'contact_country_code'  => 'required|string|max:10',
-    //         'contact_number'        => 'required|string|max:20',
-    //         'address_line'          => 'required|string|max:255',
-    //         'city'                  => 'required|string|max:100',
-    //         'state'                 => 'required|string|max:100',
-    //         'country'               => 'required|string|max:100',
-    //         'zipcode'               => 'required|string|max:20',
-    //         'company_name'          => 'required|string|max:255',
-    //         'designation'           => 'nullable|string|max:255',
-    //         'industry'              => 'nullable|string|max:255',
-    //         'message'               => 'nullable|string|max:1000',
-    //     ]);
+   public function postForm(Request $request)
+    {
+        $validated = $request->validate([
+            'event_name'           => 'required|string|max:255',
+            'full_name'            => 'required|string|max:255',
+            'email'                => 'required|email:rfc,dns|max:255|unique:tech_registrations,email',
+            'contact_country_code' => 'required|string|max:10',
+            'contact_number'       => 'required|string|max:20',
+            'address_line'         => 'required|string|max:255',
+            'city'                 => 'required|string|max:100',
+            'state'                => 'required|string|max:100',
+            'country'              => 'required|string|max:100',
+            'zipcode'              => 'required|string|max:20',
+            'company_name'         => 'required|string|max:255',
+            'designation'          => 'nullable|string|max:255',
+            'industries'           => 'required|array',
+            'industries.*'         => 'string|max:255',
+            'other_industry'       => 'nullable|string|max:255',
+            'message'              => 'nullable|string|max:1000',
+        ]);
 
-    //     TechRegistration::create($validated);
+        $industries = implode(', ', $validated['industries']);
 
-    //     return redirect()
-    //         ->back()
-    //         ->with('success', '✅ Registration successful for ' . $request->event_name . '!');
-    // }
+        $otherIndustry = $request->input('other_industry');
+        if (!empty($otherIndustry)) {
+            $industries .= ', ' . $otherIndustry;
+        }
+
+        $validated['industry'] = $industries;
+        unset($validated['industries']);
+
+        $validated['other_industry'] = $otherIndustry ?? null;
+
+        $validated['order_id'] = $this->generateOrderId($validated['event_name']);
+
+        GreenRegistrations::create($validated);
+
+        return redirect()->route('events')->with('success', '✅ Registration successful for ' . $request->event_name . '!');
+    }
+
+    private function generateOrderId(string $eventName): string
+    {
+        $words = preg_split('/\s+/', $eventName);
+        $prefix = '';
+
+        foreach ($words as $word) {
+            if (ctype_alpha($word[0])) {
+                $prefix .= strtoupper($word[0]);
+            }
+        }
+        $uniqueNumber = time();
+        return $prefix . $uniqueNumber;
+    }
 }

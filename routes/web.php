@@ -57,19 +57,19 @@ Route::get('/starups_expo', [Starup_expoController::class, 'starup_expo'])
 
 
      
-Route::get('/business_register', [BusinessController::class, 'view'])
+Route::get('/business_register', [BusinessController::class, 'getForm'])
      ->name('business_register');
   
-Route::get('/gove_business', [GoveController::class, 'view'])
+Route::get('/gove_business', [GoveController::class, 'getForm'])
      ->name('gove_business');
      
 
-  Route::get('/green_register', [GreenController::class, 'view'])
+  Route::get('/green_register', [GreenController::class, 'getForm'])
      ->name('green_register');
 
-      Route::post('/green_register', [EducationController::class, 'postForm'])->name('green.postForm');
+      Route::post('/green_register', [GreenController::class, 'postForm'])->name('green.postForm');
 
-       Route::get('/education_register', [EducationController::class, 'view'])
+       Route::get('/education_register', [EducationController::class, 'getForm'])
      ->name('education_register');
 
 

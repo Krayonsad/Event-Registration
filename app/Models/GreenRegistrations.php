@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class EducationRegistrations extends Model
+class GreenRegistrations extends Model
 {
-     use HasFactory;
-    protected $fillable = [
+    use HasFactory;
+  protected $fillable = [
         'event_name',
         'order_id',
         'full_name',
@@ -27,3 +27,4 @@ class EducationRegistrations extends Model
         'message',
     ];
 }
+
